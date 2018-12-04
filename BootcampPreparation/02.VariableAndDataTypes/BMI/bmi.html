@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+    <script>
+        var weight = parseFloat(prompt("Enter your weight : "));
+        var height = parseFloat(prompt("Enter your height : "));
+        var bmi = weight / (height * height);
+        var result = (bmi < 18) ? 'UnderWeight':(bmi < 25) ? 'Normal': (bmi < 30) ? 'OverWeight':'Obese';
+        alert(result + bmi);
+    </script>
+</body>
+</html>
