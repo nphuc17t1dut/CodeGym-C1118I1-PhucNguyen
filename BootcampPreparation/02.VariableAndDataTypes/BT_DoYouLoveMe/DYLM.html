@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOODFASTCHEAP</title>
+</head>
+<body>
+    <h1>Do you love me ?</h1>
+    <input name="yes" type="button" value="YES" onclick="yesClick()"/>
+    <input name="no" type="button" value="NO" id="noButton" onmouseover="noClick()" style="position:absolute"/>
+    <script>
+        function yesClick(){
+            alert('Yes you are right');
+        }
+        function noClick(){
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            document.getElementById('noButton').style.left = x + 'px';
+            document.getElementById('noButton').style.top  = y + 'px';
+        }
+    </script>
+</body>
+</html>
