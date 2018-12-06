@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOODFASTCHEAP</title>
+</head>
+<body>
+    <input type="checkbox" id="good" onclick="good()"/>GOOD </br>
+    <input type="checkbox" id="fast" onclick="fast()"/>FAST </br>
+    <input type="checkbox" id="cheap" onclick="cheap()"/>CHEAP 
+    <script>
+        function good(){
+            var isGood = document.getElementById('good');
+            var isFast = document.getElementById('fast');
+            var isCheap = document.getElementById('cheap');
+            var random = Math.round(Math.random(0,1));
+            if (isGood.checked && isFast.checked){
+                if (random === 0){
+                    isFast.checked = false;
+                } else {
+                    isCheap.checked = false;
+                }
+            }
+        }
+        function fast(){
+            var isGood = document.getElementById('good');
+            var isFast = document.getElementById('fast');
+            var isCheap = document.getElementById('cheap');
+            var random = Math.round(Math.random(0,1));
+            if (isGood.checked && isFast.checked){
+                if (random === 0){
+                    isGood.checked = false;
+                } else {
+                    isCheap.checked = false;
+                }
+            }
+        }
+        function cheap(){
+            var isGood = document.getElementById('good');
+            var isFast = document.getElementById('fast');
+            var isCheap = document.getElementById('cheap');
+            var random = Math.round(Math.random(0,1));
+            if (isFast.checked && isCheap.checked){
+                if (random === 0){
+                    isGood.checked = false;
+                } else {
+                    isFast.checked = false;
+                }
+            }
+        }
+            
+    </script>
+</body>
+</html>
