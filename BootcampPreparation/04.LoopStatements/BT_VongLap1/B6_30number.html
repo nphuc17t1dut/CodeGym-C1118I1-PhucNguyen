@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUMBER</title>
+</head>
+<body>
+    <script>
+        var numbers = 30;
+        var count = 0;
+        var sum = 0;
+        var n=7;
+        while(count < numbers){
+            if (n % 7 === 0){
+                sum += n;
+                count ++;
+                document.write(n + "</br>");
+            }
+            n++; 
+        }
+        alert('Sum of first 30 numbers that divided by 7 is : ' + sum);
+    </script>
+</body>
+</html>

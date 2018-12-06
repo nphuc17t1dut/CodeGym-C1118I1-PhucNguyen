@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIBONACCI</title>
+</head>
+<body>
+    <script>
+        var firstnumber = 1, secondnumber = 0,temp; 
+        while(firstnumber % 5 !== 0){
+            temp = firstnumber;
+            firstnumber = firstnumber + secondnumber;
+            secondnumber = temp;
+        }
+        alert('First fibonacci number that can divided by 5 is : '+firstnumber);
+    </script>
+</body>
+</html>

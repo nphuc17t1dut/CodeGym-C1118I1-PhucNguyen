@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPERATURE</title>
+</head>
+<body>
+    <script>
+        var temp;
+        var ask;
+        var ans;
+        do {
+            temp = parseInt(prompt('Enter your temperature : '));
+            if (temp >= 100) {
+                ask = prompt('LOWER your temperature ! Press Y to continue, N to stop');
+            } else if (temp <= 20) {
+                ask = prompt('INCREASE your temperature ! Press Y to continue, N to stop');     
+            } else {
+                ask = prompt('Your temperature is fine.Do you want to continue ? (Y/N)');
+            }
+            if (ask === 'Y') {
+                ans = true;
+            } else {
+                ans = false;
+            }
+        } while (ans);
+    </script>
+</body>
+</html>

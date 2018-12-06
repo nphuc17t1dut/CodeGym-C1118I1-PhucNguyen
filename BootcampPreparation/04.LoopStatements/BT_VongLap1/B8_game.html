@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NUMBER</title>
+</head>
+
+<body>
+    <button type="button" onclick="randomgame()">Chơi</button>
+    <script>
+        function randomgame() {
+            var fromNumber;
+            var toNumber;
+            var randomNumber;
+            var guestNumber;
+            var count;
+            var ans;
+            var replay;
+            do {
+                alert('Nhập khoảng cần đoán : ');
+                fromNumber = parseInt(prompt('Từ :'));
+                toNumber = parseInt(prompt('Đến : '));
+                randomNumber = getRandomInt(fromNumber, toNumber);console.log(randomNumber);
+                guestNumber = parseInt(prompt("Hãy đoán một số bất kỳ trong khoảng bạn vừa nhập:"));
+                count = 2;
+                var result = (guestNumber == randomNumber);
+                while (!result && count > 0) {
+                    if (guestNumber < randomNumber) {
+                        guestNumber = parseInt(prompt('Số bạn vừa chọn nhỏ hơn số cần đoán ! Còn ' + count + ' lượt'));
+                    } else {
+                        guestNumber = parseInt(prompt('Số bạn vừa chọn lớn hơn số cần đoán ! Còn ' + count + ' lượt'));
+                    }
+                    if (guestNumber == randomNumber) {
+                        result = true;
+                        break;
+                    }
+                    count --;
+                }
+
+                if (result) {
+                    replay = prompt('Bạn đã đoán đúng ! Bấm Y để tiếp tục, N để thoát');
+                } else {
+                    replay = prompt('Bạn đã hết lượt chơi !Bấm Y để tiếp tục, N để thoát');
+                }
+
+                if (replay === 'Y') {
+                    ans = true;
+                } else {
+                    ans = false;
+                }
+            } while (ans);
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+    </script>
+</body>
+
+</html>

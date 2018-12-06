@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIBONACCI</title>
+</head>
+<body>
+    <script>
+        var numbers = 20;
+        var count = 0;
+        var firstnumber = 1, secondnumber = 0,temp; 
+        while(count < numbers){
+            temp = firstnumber;
+            firstnumber = firstnumber + secondnumber;
+            secondnumber = temp;
+            document.write(secondnumber + '</br>');
+            count ++ ;
+        }
+    </script>
+</body>
+</html>

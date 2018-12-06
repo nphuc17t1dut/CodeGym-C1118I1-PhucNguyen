@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIBONACCI</title>
+</head>
+<body>
+    <script>
+        var numbers = 20;
+        var count = 0;
+        var firstnumber = 1, secondnumber = 0,temp;
+        var result = 0; 
+        while(count < numbers){
+            temp = firstnumber;
+            firstnumber = firstnumber + secondnumber;
+            secondnumber = temp;
+            result += secondnumber; 
+            count ++ ;
+        }
+        alert('Sum of first 20 fibonacci numbers is : '+result);
+    </script>
+</body>
+</html>
