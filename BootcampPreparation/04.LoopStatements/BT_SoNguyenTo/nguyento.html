@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NGUYENTO</title>
+</head>
+
+<body>
+    <script>
+        var numbers = 20;
+        var count = 0;
+        var n = 2;
+
+        while (count < numbers) {
+            if (snt(n)) {
+                document.write(n + "</br>");
+                count = count + 1;
+            }
+            n++;
+        }
+
+        function snt(val) {
+            var result = true;
+            if (val !== 2) {
+                for (var i = 2; i < val - 1; i++) {
+                    if (val % i === 0) {
+                        result = false;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
+    </script>
+</body>
+
+</html>
