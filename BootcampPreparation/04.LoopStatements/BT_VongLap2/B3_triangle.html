@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRIANGLE</title>
+</head>
+
+<body>
+    <script>
+        var height = 5;
+        var star;
+        var space;
+        var row;
+        for (row = 1; row <= height; row++) {
+            for (star = 1; star <= row; star++) {
+                document.write('*');
+            }
+            document.write('</br>');
+        }
+        document.write('</br>');
+        for (row = height; row >= 1; row--) {
+            for (star = 1; star <= row; star++) {
+                document.write('*');
+            }
+            document.write('</br>');
+        }
+        document.write('</br>');
+        for (row = 1; row <= height; row++) {
+            for (space = height - row; space >= 1; space--) {
+                document.write('&#160 &#160');
+            }
+            for (star = 1; star <= row; star++) {
+                document.write('* ');
+            }
+            document.write('</br>');
+        }
+        document.write('</br>');
+        for (row = 1; row <= height; row++) {
+            for (space = 1; space <= row; space++) {
+                document.write('&#160 &#160');
+            }
+            for (star = height; star >= row; star--) {
+                document.write('* ');
+            }
+            document.write('</br>');
+        }
+
+    </script>
+</body>
+
+</html>

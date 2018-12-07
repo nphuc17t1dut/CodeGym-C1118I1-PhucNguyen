@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BANK</title>
+</head>
+
+<body>
+    <script>
+        var amount = parseFloat(prompt('Enter the amount you want to borrow : '));
+        var month = parseInt(prompt('Enter the months you want to borrow : '));
+        var rate = 0.05;
+        var total = amount;
+        for (i = 1; i <= month;i++){
+            total *= (1 + rate);
+        }
+        alert('The amount you have to pay after '+month+((month === 1)?' month ':' months ')+'is : ' +total);
+    </script>
+</body>
+
+</html>
