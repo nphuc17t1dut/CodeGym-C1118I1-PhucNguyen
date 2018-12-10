@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CHECK</title>
+</head>
+
+<body>
+
+    <script>
+        var array = new Array(10);
+        var addArray = [];
+        var count = 0;
+        for (var i = 0;i < array.length;i++){
+            array[i] = Math.floor(Math.random()*30);
+            if (array[i] >= 10){
+                addArray.push(array[i]);
+                count++;
+            }
+        }
+        document.write('There are ' + count + ' element >= 10 : ' + addArray);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NEGATIVE</title>
+</head>
+
+<body>
+
+    <script>
+        var numbers = new Array(10);
+        var V = getRndInteger(-10, 10);
+        for (var i = 0; i < numbers.length; i++) {
+            numbers[i] = getRndInteger(-10, 10);
+        }
+        console.log(numbers);
+        console.log(V);
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] == V) {
+                result = true;
+                break;
+            } else {
+                result = false;
+            }
+        }
+        if (result) {
+            alert('V is in the array');
+        } else {
+            alert('V is not in the array');
+        }
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+
+</body>
+
+</html>

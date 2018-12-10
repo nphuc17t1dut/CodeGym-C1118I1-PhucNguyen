@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MAX</title>
+</head>
+
+<body>
+
+    <script>
+        var array = new Array(10);
+        var sum = 0;
+        for (var i = 0;i < array.length;i++){
+            array[i] = Math.floor(Math.random()*100);
+        }
+        console.log(array);
+        max = array[0];
+        for (var i = 1;i < array.length;i++){
+            if (array[i] > max){
+                max = array[i];
+            }
+            sum += array[i];
+        }
+        var avg = sum / array.length;
+        document.write('Max number is : '+max+'</br>');
+        document.write('Average number is : '+ avg)
+    </script>
+
+</body>
+
+</html>

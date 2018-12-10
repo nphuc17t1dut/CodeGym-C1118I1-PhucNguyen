@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FIND V AND ERASE</title>
+</head>
+
+<body>
+
+    <script>
+        var numbers = new Array(10);
+        var V = getRndInteger(-10, 10);
+        for (var i = 0; i < numbers.length; i++) {
+            numbers[i] = getRndInteger(-10, 10);
+        }
+        console.log(numbers);
+        console.log(V);
+        result = false;
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] == V) {
+                result = true;
+                index = i;
+                for (var j = index; j < numbers.length - 1; j++) {
+                    numbers[j] = numbers[j + 1];
+                }
+                numbers[numbers.length - 1] = 0;
+
+            }
+        }
+        if (result != true) {
+            alert('V is not in the array');
+        }
+        document.write(numbers);
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+
+</body>
+
+</html>

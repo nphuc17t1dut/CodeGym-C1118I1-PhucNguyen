@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MAX</title>
+</head>
+
+<body>
+
+    <script>
+        var array = new Array(10);
+        var index = 0;
+        for (var i = 0;i < array.length;i++){
+            array[i] = Math.floor(Math.random()*100);
+        }
+        console.log(array);
+        max = array[0];
+        for (var i = 1;i < array.length;i++){
+            if (array[i] > max){
+                max = array[i];
+                index = i;
+            }
+        }
+        document.write('Max number is in position '+ index +' value = '+max);
+    </script>
+
+</body>
+
+</html>
