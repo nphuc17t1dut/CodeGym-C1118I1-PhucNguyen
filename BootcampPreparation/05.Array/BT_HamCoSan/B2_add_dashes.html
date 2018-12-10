@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STRING</title>
+</head>
+
+<body>
+
+    <script>
+        var num = prompt();
+        var string = num.toString();
+        var result = new Array();
+        result[0] = string[0];
+        for (var i = 1; i <string.length;i++ ){
+            if (string[i-1] % 2 === 0 && string[i] % 2 ===0 ){
+                result.push('-', string[i]);
+            } else {
+                result.push(string[i]);
+            }
+        }
+        alert(result.join(''));
+    </script>
+
+</body>
+
+</html>
