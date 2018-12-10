@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>10GRADE</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt('Enter the first number : '));
+        var b = parseInt(prompt('Enter the second number : '));
+        var c = parseInt(prompt('Enter the last number : '));
+        var max = 0;
+        if (a > b){
+            if (a > c){
+                max = a;
+            } else {
+                max = c;
+            }
+        } else {
+            if (b > c){
+                max = b;
+            } else{
+                max = c;
+            }
+        }
+        alert('The biggest number is : '+ max);
+    </script>
+</body>
+
+</html>
