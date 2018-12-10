@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DICTIONARY</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <input type="button" value="Translate" onclick="trans()" />
+    <p id="result"></p>
+    <script>
+
+        function trans() {
+            var str = document.getElementById('input').value;
+            var englishWords = ['Red', 'Blue', 'Green', 'Black', 'White'];
+            var vnWords = ['Đỏ', 'Xanh dương', 'Xanh lá cây', 'Đen', 'Trắng'];
+            var index = 0;
+            var result;
+            for (var i = 0; i < englishWords.length; i++) {
+                if (str !== englishWords[i]) {
+                    result = false;
+                } else {
+                    result = true;
+                    index = i;
+                    break;
+                }
+            }
+            if (result) {
+                document.getElementById('result').innerHTML = vnWords[index];
+            } else {
+                document.getElementById('result').innerHTML = 'Word not found !';
+            }
+        }
+    </script>
+</body>
+
+</html>
