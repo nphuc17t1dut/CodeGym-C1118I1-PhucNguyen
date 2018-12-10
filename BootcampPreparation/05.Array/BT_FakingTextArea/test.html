@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAKING TEXT AREA</title>
+</head>
+
+<body>
+    <h2>TYPE ANYTHING SLOWLY</h2>
+    <form name="f">
+            <textarea cols="50" rows="4" name="txt" ></textarea> 
+    </form>
+    <button  onclick="alerta()">TEST</button>
+    
+    <script>
+     
+        function alerta(){
+            var a = document.f.txt.value;
+        alert(a);
+        }
+        function fake(){
+            alert(document.f.txt.value);
+        }
+    </script>
+
+</body>
+
+</html>

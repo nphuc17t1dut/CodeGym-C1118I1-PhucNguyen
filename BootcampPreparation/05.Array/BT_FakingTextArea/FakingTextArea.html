@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAKING TEXT AREA</title>
+</head>
+
+<body>
+    <h2>TYPE ANYTHING SLOWLY</h2>
+    <form name="f">
+            <textarea cols="50" rows="4" name="txt" onkeydown="fakeType()"></textarea> 
+    </form>
+    
+    <script>
+        var fakeText = 'TÔI BỊ ĐIÊN !!!';
+        var fakeTextArray = fakeText.split('');
+        var result ='';
+       
+        function fakeType(){
+            var text = document.f.txt.value;
+            if (text.length > 0){
+                for(var i = 0;i<text.length;i++){
+                    result += fakeTextArray[i];
+                    if (i == fakeTextArray.length){
+                        document.f.txt.value = '';
+                        result = '';
+                    }
+                }
+            }
+            document.f.txt.value = result;
+            result = '';
+            setTimeout('fakeType()',1);
+        }
+    </script>
+
+</body>
+
+</html>
