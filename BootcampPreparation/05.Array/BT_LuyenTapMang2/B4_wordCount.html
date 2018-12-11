@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WORD COUNT</title>
+</head>
+<body>
+    <script>
+        var arrayText = prompt('Type a sentence : ');
+        var array = arrayText.split('');
+        var spaceCount = 0;
+        for(var i = 0;i<array.length;i++){
+            if (array[i] == ' '){
+                spaceCount++;
+            }
+        }
+        var wordCount = spaceCount + 1;
+        document.write('There ' + (wordCount > 1 ? ' are ':' is ')+ wordCount + (wordCount > 1 ? ' words':' word')+' in the sentence');
+    </script>
+</body>
+</html>

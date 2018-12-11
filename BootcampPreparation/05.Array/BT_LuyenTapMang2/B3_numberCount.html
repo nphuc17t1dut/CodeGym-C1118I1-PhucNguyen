@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>COUNT</title>
+</head>
+
+<body>
+
+    <script>
+        var arrayText = prompt('Type anything :');
+        var array = arrayText.split('');
+        var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var lower = 'abcdefghijklmnopqrstuvwxyz';
+        var countNumber = array.length;
+        for (var i = 0 ; i < array.length;i++){
+            if (upper.indexOf(array[i]) !== -1 ){
+                countNumber--;
+            } else if (lower.indexOf(array[i]) !== -1){
+                countNumber--;
+            }
+        }   
+        document.write('There are ' + countNumber + (countNumber > 1 ? ' numbers':' number')+' in the string');     
+    </script>
+
+</body>
+
+</html>

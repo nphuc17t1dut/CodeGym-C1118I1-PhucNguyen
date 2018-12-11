@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CHANGE</title>
+</head>
+
+<body>
+
+    <script>
+        var arrayText = prompt('Type anything :');
+        var array = arrayText.split('');
+        for (var i = 0 ; i < array.length;i++){
+            if (array[i] == '-'){
+                array[i] = '_';
+            }
+        }
+        document.write(array.join(''));
+    </script>
+
+</body>
+
+</html>
