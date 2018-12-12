@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VOWEL CHECK</title>
+</head>
+<body>
+    <script>
+        var char = prompt('Type a character :');
+        var vowelArray = ['u','U','e','E','o','O','a','A','i','I'];
+        function vowelCheck(char){
+            var result;
+            for (var i = 0; i<vowelArray.length;i++){
+                if(char != vowelArray[i]){
+                    result = false;
+                } else {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+        alert(vowelCheck(char));
+    </script>
+</body>
+
+</html>

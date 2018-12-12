@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CHAR FINDING</title>
+</head>
+
+<body>
+    <script>
+        var text = prompt('Type anything : ');
+        var arrayText = text.split('');
+        var char = prompt('Type a character : ');
+        alert(charFind(arrayText,char));
+        function charFind(array, char) {
+            var count = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (char == array[i]) {
+                    count++;
+                }
+            }
+            if (count > 0) {
+                return count;
+            } else {
+                return -1;
+            }
+        } 
+
+    </script>
+</body>
+
+</html>
