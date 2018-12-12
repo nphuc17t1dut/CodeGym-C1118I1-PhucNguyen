@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STAR AND CONSTELLATION</title>
+</head>
+
+<body>
+    <script>
+        var starName = prompt('Type a star : ');
+        var star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        var constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function starFind(name) {
+            for (var i = 0; i < star.length; i++) {
+                if (name != star[i]) {
+                    continue;
+                } else {
+                    return constellation[i];
+                }
+            }
+            return 'Star not found';
+        }
+        alert(starFind(starName));
+    </script>
+</body>
+
+</html>

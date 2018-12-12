@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW</title>
+</head>
+
+<body>
+    <p id='showResult'></p>
+    <script>
+        var firstNumber = parseInt(prompt('Type first number :'));
+        var secondNumber = parseInt(prompt('Type second number :'));
+
+        function mess(num1,num2) {
+            if (num1 > num2){
+                alert(num1 + ' > ' + num2);
+            } else {
+                return num1+num2;
+            }
+        }
+        document.getElementById('showResult').innerHTML = mess(firstNumber,secondNumber);
+    </script>
+</body>
+
+</html>
