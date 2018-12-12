@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PALINDROME CHECK</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(str) {
+            var result;
+            var array = str.split('');
+            if (array.length == 0 || array.length == 1) {
+                result = true;
+            } else if (array[0] != array[array.length - 1]) {
+                result = false;
+            } else {
+                for (var i = 1; i < array.length / 2; i++) {
+                    if (array[i] != array[array.length - 2 - i]) {
+                        result = false;
+                    }
+                }
+                result = true;
+            }
+            return result;
+        }
+        var str = prompt('Type a string');
+        alert(str + (isPalindrome(str) ? ' is ' : ' is not ') + 'a palindrome');
+    </script>
+</body>
+
+</html>
