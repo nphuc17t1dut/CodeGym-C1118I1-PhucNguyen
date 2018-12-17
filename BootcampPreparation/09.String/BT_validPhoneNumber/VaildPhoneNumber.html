@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <tite>VALIDATE PHONE NUMBER</tite>
+</head>
+
+<body>
+    <script>
+        function isPhoneNumber(str) {
+            var regexp = /^[(]+\d{2}[)]+-[(]+[0]+\d{9}[)]+$/;
+            if (regexp.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var validPhoneNumber = ['(84)-(0987654321)', '(18)-(0222222222)', '(22)-(0222222223)','(27)-(0123456789)','(42)-(0987654321)'];
+        var unValidPhoneNumber = ['(a8)-(22222222)', '(38)-(022222222)', '(33)-(0222222222222222)','(118)-(0222222223333)','(12)-(0123)'];
+        for (var i = 0; i < validPhoneNumber.length; i++) {
+            console.log(isPhoneNumber(validPhoneNumber[i]));
+            console.log(isPhoneNumber(unValidPhoneNumber[i]));
+        } 
+    </script>
+</body>
+
+</html>
