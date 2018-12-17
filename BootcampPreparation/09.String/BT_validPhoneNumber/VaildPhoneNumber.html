@@ -16,9 +16,9 @@
                 return false;
             }
         }
-        
-        var validPhoneNumber = ['(84)-(0987654321)', '(18)-(0222222222)', '(22)-(0222222223)','(27)-(0123456789)','(42)-(0987654321)'];
-        var unValidPhoneNumber = ['(a8)-(22222222)', '(38)-(022222222)', '(33)-(0222222222222222)','(118)-(0222222223333)','(12)-(0123)'];
+
+        var validPhoneNumber = ['(84)-(0987654321)', '(18)-(0222222222)', '(22)-(0222222223)', '(27)-(0123456789)', '(42)-(0987654321)'];
+        var unValidPhoneNumber = ['(a8)-(22222222)', '(38)-(022222222)', '(33)-(0222222222222222)', '(118)-(0222222223333)', '(12)-(0123)'];
         for (var i = 0; i < validPhoneNumber.length; i++) {
             console.log(isPhoneNumber(validPhoneNumber[i]));
             console.log(isPhoneNumber(unValidPhoneNumber[i]));
