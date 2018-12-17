@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LIVING TIME</title>
+</head>
+<body>
+    <script>
+        var bornDate = new Date('1999-10-07 14:00:00');
+        var nowDate = new Date();
+        var livingYear = nowDate.getFullYear()-bornDate.getFullYear();
+        var livingMonth = livingYear * 12;
+        var livingDay = livingMonth * 30;
+        var livingHour = livingDay * 24;
+        var livingMinute = livingHour * 60;
+        var livingSecond = livingMinute * 60;
+        alert('I\'ve lived : ');
+        alert(livingYear+' years');
+        alert(livingMonth+' months');
+        alert(livingDay+' days');
+        alert(livingHour+' hours');
+        alert(livingMinute+' minutes');
+        alert(livingSecond+' seconds');
+    </script>
+</body>
+</html>

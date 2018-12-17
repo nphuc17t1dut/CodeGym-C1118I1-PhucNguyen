@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>STRING</title>
+</head>
+<body>
+    <script>
+        var str = 'Tôi yêu ngôn ngữ lập trình Javascript';
+        console.log('Chữ a xuất hiện ' + str.match(/[a]/g).length + ' lần');
+        var strArray = str.split(' ');
+        console.log('Có ' + strArray.length + ' từ trong chuỗi');
+        str = str.replace('Javascript','Typescript');
+        console.log(str);
+    </script>
+</body>
+</html>
