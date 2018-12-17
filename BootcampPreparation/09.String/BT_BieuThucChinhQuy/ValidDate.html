@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <tite>VALIDATE DATE</tite>
+</head>
+
+<body>
+    <script>
+        function isDate(str) {
+            var regexp = /^\d{2}\/\d{2}\/\d{4}$/;
+            if (regexp.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        var date = prompt('Enter a date : ');
+        if (isDate(date)) {
+            alert('It\'s a valid date !');
+        } else {
+            alert('It\'s not a valid date !');
+        }
+    </script>
+</body>
+
+</html>

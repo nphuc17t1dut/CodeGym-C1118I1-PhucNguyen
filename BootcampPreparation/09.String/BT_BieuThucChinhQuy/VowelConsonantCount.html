@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VOWEL AND CONSONANT COUNT</title>
+</head>
+
+<body>
+    <script>
+        var vowel = /[uUeEoOaAiI]/g;
+        var str = prompt('Enter a string');
+        var vowelCount = str.match(vowel).length;
+        var spaceCount = str.match(/\s/g).length;
+        var consonantCount = str.length - vowelCount - spaceCount;
+        console.log(vowelCount);
+        console.log(consonantCount);
+    </script>
+</body>
+
+</html>

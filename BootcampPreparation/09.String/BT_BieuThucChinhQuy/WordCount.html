@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WORDS COUNT</title>
+</head>
+<body>
+    <script>
+        function wordCount(str){
+            if(str == ''){
+                return 0;
+            } else {
+                return str.trim().split(/\s+/).length;
+            }
+        }
+
+        var str = prompt('Enter a string :');
+        var result = wordCount(str);
+        alert('There ' + (result>1?' are ':' is ') + result + (result>1?' words':' word') + ' in the string');
+    </script>
+</body>
+</html>
