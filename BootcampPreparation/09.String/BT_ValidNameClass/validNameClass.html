@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <tite>VALIDATE CLASS 'S NAME</tite>
+</head>
+
+<body>
+    <script>
+        function isNameClass(str) {
+            var regexp = /^[ACP][0-9]{4}[GHIKLM]$/;
+            if (regexp.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var validNameClass = ['C8234G', 'A3123M', 'P1111I','A0303K','P1000L'];
+        var unValidNameClass = ['M0000G', 'A12345M', 'M123M','C1234O','A!0303M'];
+        for (var i = 0; i < validNameClass.length; i++) {
+            console.log(isNameClass(validNameClass[i]));
+            console.log(isNameClass(unValidNameClass[i]));
+        } 
+    </script>
+</body>
+
+</html>
