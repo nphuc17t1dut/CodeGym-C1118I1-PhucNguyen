@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <tite>VALIDATE ACCOUNT</tite>
+</head>
+
+<body>
+    <script>
+        function isAccount(str) {
+            var regexp = /^[_a-z0-9]{6,}$/;
+            if (regexp.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var validAccount = ['123abc_', '_abc123', '______','123456','abcdefg'];
+        var unValidAccount = ['.@', '12345', '1234_','abcde','@@'];
+        for (var i = 0; i < validAccount.length; i++) {
+            console.log(isAccount(validAccount[i]));
+            console.log(isAccount(unValidAccount[i]));
+        } 
+    </script>
+</body>
+
+</html>
