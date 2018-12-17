@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <tite>VALIDATE EMAIL</tite>
+</head>
+
+<body>
+    <script>
+        function isEmail(str) {
+            var regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/; //web dư 1 dấu \ 
+            if (regexp.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var validEmail = ['a@gmail.com', 'ab@yahoo.com', 'abc@hotmail.com'];
+        var unValidEmail = ['@gmail.com', 'ab@gmail.', '@#abc@gmail.com'];
+        for (var i = 0; i < validEmail.length; i++) {
+            console.log(isEmail(validEmail[i]));
+            console.log(isEmail(unValidEmail[i]));
+        } 
+    </script>
+</body>
+
+</html>
