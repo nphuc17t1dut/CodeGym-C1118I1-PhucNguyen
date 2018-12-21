@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>COUNTING</title>
+</head>
+
+<body>
+    <script>
+        function dispArr(arr) {
+            for (var i = 0; i < arr.length; ++i) {
+                document.write(arr[i] + " ");
+                if (i % 10 == 9) {
+                    document.write("</br>");
+                }
+            }
+            if (i % 10 != 0) {
+                document.write("</br>");
+            }
+        }
+        function binSearch(arr, data) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === data) {
+                    return i;
+                }
+            }
+        }
+
+        function count(arr, data) {
+            var count = 0;
+            var position = binSearch(arr, data);
+            if (position > -1) {
+                ++count;
+                for (var i = position - 1; i > 0; --i) {
+                    if (arr[i] == data) {
+                        ++count;
+                    }
+                    else {
+                        break;
+                    }
+                }
+
+                for (var i = position + 1; i < arr.length; ++i) {
+                    if (arr[i] == data) {
+                        ++count;
+                    }
+                    else {
+                        break;
+                    }
+                }
+            } //end if
+            return count;
+        }
+
+        var nums = [];
+        for (var i = 0; i < 100; ++i) {
+            nums[i] = Math.floor(Math.random() * 101);
+        }
+        nums.sort(function (a, b) { return a - b });
+        dispArr(nums);
+        document.write("<br/>");
+        var val = parseInt(prompt("Enter a value to count: "));
+        var retVal = count(nums, val);
+        document.write("Found " + retVal + " occurrences of " + val + ".");
+    </script>
+</body>
+
+</html>
