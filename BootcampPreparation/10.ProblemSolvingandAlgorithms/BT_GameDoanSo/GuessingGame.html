@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GUESSING GAME</title>
+</head>
+
+<body>
+    <script>
+        var nums = []
+        for (var i = 0; i < 100; i++) {
+            nums[i] = Math.floor(Math.random() * 100) + 1;
+        }
+        nums.sort(function (a, b) { return a - b });
+        var guessNum = Math.floor(Math.random() * 100) + 1;
+        console.log(nums);
+        console.log(guessNum);
+
+        //Linear Search
+        function linearSearch(arr, data) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === data) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        var resultLinear = linearSearch(nums, guessNum);
+        console.log('result by linear search :' + resultLinear);
+        console.time('Time linear search execute');
+        binSearch(nums, guessNum);
+        console.timeEnd('Time linear search execute');
+
+        //Binary Search
+        function binSearch(arr, data) {
+            var left = 0;
+            var right = arr.length - 1;
+            while (left <= right) {
+                mid = Math.floor((left + right) / 2);
+                if (arr[mid] === data) {
+                    return mid;
+                } else if (arr[mid] > data) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            }
+            return -1;
+        }
+        var resultBin = binSearch(nums, guessNum);
+        console.log('result by binary search :' + resultBin);
+        console.time('Time binary search execute');
+        binSearch(nums, guessNum);
+        console.timeEnd('Time binary search execute');
+
+    </script>
+</body>
+
+</html>
