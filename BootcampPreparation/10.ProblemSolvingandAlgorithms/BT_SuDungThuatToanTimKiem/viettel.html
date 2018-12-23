@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FINDING VIETTEL</title>
+</head>
+<body>
+    <script>
+        var regexp = /^03[2-9]\d{7}/;
+        var checkNumber = ['0331234567', '0901234567', '0347654321', '03334'];
+        for (var i = 0; i < checkNumber.length;i++){
+            console.log(regexp.test(checkNumber[i]));
+        }
+    </script>
+</body>
+</html>
