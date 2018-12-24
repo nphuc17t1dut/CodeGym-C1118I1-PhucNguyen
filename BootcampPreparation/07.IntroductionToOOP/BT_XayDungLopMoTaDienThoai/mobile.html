@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MOBILE</title>
+</head>
+
+<body>
+    <script>
+        function Mobile(battery) {
+            this.battery = battery;
+            this.msg = '';
+            this.comeMsg = '';
+            this.sentMsg = '';
+
+            //charge Battery
+            this.chargeBattery = function () {
+                this.battery++;
+            };
+
+            //status check
+            this.statusCheck = function () {
+                if (this.status) {
+                    alert('The mobile is on !');
+                } else {
+                    alert('THe mobile is off !');
+                }
+                this.dropBattery();
+            };
+
+            //turn On
+            this.turnOn = function () {
+                if (battery === 0) {
+                    alert('Out of battery, please charge !');
+                } else {
+                    this.status = true;
+                }
+            };
+            //turn Off
+            this.turnOff = function () {
+                this.status = false;
+            };
+
+            //text messenger
+            this.textMsg = function () {
+                this.msg = prompt('MESSENGER :');
+                this.dropBattery();
+            };
+
+            //Coming messenger
+            this.inbox = function (mobile) {
+                this.comeMsg += moble.msg + '</br>';
+                this.dropBattery();
+            };
+
+            //send a messenger
+            this.send = function (mobile) {
+                mobile.comeMsg = this.msg;
+                this.sentMsg += this.msg + '</br>';
+                this.dropBattery();
+            };
+
+            //Check inbox
+            this.checkInbox = function () {
+                document.write('Inbox :');
+                document.write(this.comeMsg);
+                this.dropBattery();
+            };
+
+            //Check sent messenger
+            this.checkSentMsg = function () {
+                document.write('Sent messenger :');
+                document.write(this.sentMsg);
+                this.dropBattery();
+            };
+
+            //Drop battery
+            this.dropBattery = function () {
+                this.battery--;
+            };
+        }
+
+
+        var iphone = new Mobile(100);
+        var nokia = new Mobile(99);
+        nokia.turnOn();
+        iphone.turnOn();
+        nokia.textMsg();
+        nokia.send(iphone);
+        iphone.checkInbox();
+    </script>
+</body>
+
+</html>
