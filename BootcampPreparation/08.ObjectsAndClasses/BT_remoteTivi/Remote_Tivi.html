@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>REMOTE TIVI</title>
+</head>
+
+<body>
+    <script>
+        function remote() {
+            this.switchChannel = function (tivi, channel) {
+                tivi.setChannel(channel);
+                tivi.getChannel();
+            }
+            this.switchVolumn = function (tivi, volumn) {
+                tivi.setVolumn(volumn);
+                tivi.getVolumn();
+            }
+            this.switchTivi = function (tivi, status) {
+                if (status == 'on') {
+                    tivi.status = true;
+                } else {
+                    tivi.status = false;
+                }
+            }
+        }
+
+        function tivi() {
+            this.volumn = Math.floor(Math.random() * 100);
+            this.setChannel = function (channel) {
+                this.channel = channel;
+            }
+            this.getChannel = function () {
+                return this.channel;
+            }
+            this.showChannel = function () {
+                console.log('Watching Channel : ' + this.channel);
+            }
+            this.setVolumn = function (volumn) {
+                this.volumn = volumn;
+            }
+            this.getVolumn = function () {
+                return this.volumn;
+            }
+            this.showVolumn = function () {
+                console.log('Volume : ' + this.volumn);
+            }
+            this.turnOn = function () {
+                this.status = true;
+            }
+            this.turnOff = function () {
+                this.status = false;
+            }
+            this.showStatus = function () {
+                if (this.status) {
+                    console.log('Tivi is on');
+                } else {
+                    console.log('Tivi is off');
+                }
+            }
+        }
+
+        var Remote = new remote;
+        var TiVi = new tivi;
+
+        TiVi.turnOn();
+        TiVi.showStatus();
+        TiVi.setChannel(7);
+        TiVi.getChannel();
+        TiVi.showChannel();
+        Remote.switchChannel(TiVi, 3);
+        TiVi.showChannel();
+        TiVi.showVolumn();
+        TiVi.setVolumn(TiVi.volumn + 2);
+        TiVi.showVolumn();
+        Remote.switchTivi(TiVi, 'off');
+        TiVi.showStatus();
+    </script>
+</body>
+
+</html>
