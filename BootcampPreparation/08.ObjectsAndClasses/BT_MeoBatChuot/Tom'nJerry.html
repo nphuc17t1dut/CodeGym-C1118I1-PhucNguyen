@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TOM AND JERRY</title>
+</head>
+
+<body>
+    <script>
+        var mouse = {
+            name: "Rat",
+            weigth: 1,
+            speed: 10,
+            status: function () {
+                if (mouse.weigth > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+            say: function () {
+                alert('Chit Chit');
+            }
+        }
+
+        var cat = {
+            name: "Cat",
+            weigth: 10,
+            speed: 2,
+            say: function () {
+                alert('Meow Meow');
+            },
+            catchMouse: function (mouse) {
+                while (cat.speed < mouse.speed) {
+                    cat.speed++;
+                }
+                alert('Catched !');
+            },
+            eatMouse: function (mouse) {
+                if (mouse.status) {
+                    cat.weigth += mouse.weigth;
+                    mouse.weigth = 0;
+                    mouse.staus = false;
+                }
+            }
+        }
+
+        mouse.say();
+        cat.say();
+        cat.catchMouse(mouse);
+        cat.eatMouse(mouse);
+        console.log(cat.weigth);
+        console.log(mouse.status());
+    </script>
+</body>
+
+</html>
